@@ -26,6 +26,13 @@ export default function PlaceDetailsPage() {
 
   return (
     <div className="bg-background min-h-screen pb-20">
+      {/* Preload Hero Image */}
+      <img
+        src={place.heroImage}
+        alt="Hero Preload"
+        className="hidden"
+        fetchPriority="high"
+      />
       {/* 1. Hero Section */}
       <section className="relative h-[55vh] md:h-[65vh] w-full overflow-hidden">
         <motion.div
@@ -100,6 +107,7 @@ export default function PlaceDetailsPage() {
                   <img
                     src={img}
                     alt={`Gallery ${idx}`}
+                    loading="lazy"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>

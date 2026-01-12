@@ -57,6 +57,13 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
+      {/* Preload Hero Image */}
+      <img
+        src={MainHeroImage}
+        alt="Hero Preload"
+        className="hidden"
+        fetchPriority="high"
+      />
       {/* 1. Main Landing Hero */}
       <section className="sticky top-0 h-screen min-h-[700px] w-full overflow-hidden flex items-center justify-center z-1">
         {/* Background Parallax/Video would go here, static for now */}
@@ -113,6 +120,12 @@ export default function HomePage() {
       {/* 2. Interactive Places Section */}
       {/* This section changes background based on active slide */}
       <section className="relative min-h-screen py-20 overflow-hidden flex items-center z-10 bg-black shadow-[0_-50px_100px_rgba(0,0,0,0.8)]">
+        {/* Preload Dynamic Background */}
+        <img
+          src={activePlace.heroImage}
+          alt="Active Background Preload"
+          className="hidden"
+        />
         {/* Dynamic Background */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -183,6 +196,7 @@ export default function HomePage() {
                       <img
                         src={place.images[0]}
                         alt={place.title}
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
