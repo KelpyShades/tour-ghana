@@ -65,7 +65,7 @@ export default function HomePage() {
         fetchPriority="high"
       />
       {/* 1. Main Landing Hero */}
-      <section className="sticky top-0 h-screen min-h-[700px] w-full overflow-hidden flex items-center justify-center z-1">
+      <section className="sticky top-0 h-dvh min-h-[700px] w-full overflow-hidden flex items-center justify-center z-1">
         {/* Background Parallax/Video would go here, static for now */}
         <motion.div
           className="absolute inset-0 bg-cover bg-center z-0"
@@ -119,7 +119,7 @@ export default function HomePage() {
 
       {/* 2. Interactive Places Section */}
       {/* This section changes background based on active slide */}
-      <section className="relative min-h-screen py-20 overflow-hidden flex items-center z-10 bg-black shadow-[0_-50px_100px_rgba(0,0,0,0.8)]">
+      <section className="relative min-h-dvh py-20 overflow-hidden flex items-center z-10 bg-black shadow-[0_-50px_100px_rgba(0,0,0,0.8)]">
         {/* Preload Dynamic Background */}
         <img
           src={activePlace.heroImage}

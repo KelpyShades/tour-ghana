@@ -1,5 +1,4 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -14,41 +13,6 @@ export default function Footer() {
               Experience the warmth, rhythm, and colors of West Africa with our
               curated tours and unforgettable adventures.
             </p>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-lg mb-4 text-gold-light">Company</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <Link to="/about" className="hover:text-gold transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-gold transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/careers"
-                  className="hover:text-gold transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/privacy"
-                  className="hover:text-gold transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-            </ul>
           </div>
 
           <div>

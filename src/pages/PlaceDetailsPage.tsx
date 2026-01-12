@@ -25,7 +25,7 @@ export default function PlaceDetailsPage() {
   }
 
   return (
-    <div className="bg-background min-h-screen pb-20">
+    <div className="bg-background min-h-dvh pb-20">
       {/* Preload Hero Image */}
       <img
         src={place.heroImage}
