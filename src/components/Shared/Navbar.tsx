@@ -19,9 +19,32 @@ export function Navbar() {
         </span>
       </Link>
 
-      {/* Menu - Simplified for now or add actual links */}
-      <div className="pointer-events-auto">
-        {/* Placeholder for menu items or hamburger */}
+      {/* Menu */}
+      <div className="pointer-events-auto flex items-center space-x-8">
+        <Link
+          to="/"
+          className="text-xs font-bold uppercase tracking-[0.15em] hover:text-kente-gold transition-colors"
+        >
+          Home
+        </Link>
+        <Link
+          to="/about"
+          className="text-xs font-bold uppercase tracking-[0.15em] hover:text-kente-gold transition-colors"
+        >
+          About
+        </Link>
+        <Link
+          to="/guide"
+          className="text-xs font-bold uppercase tracking-[0.15em] hover:text-kente-gold transition-colors"
+        >
+          Guide
+        </Link>
+        <Link
+          to="/faq"
+          className="text-xs font-bold uppercase tracking-[0.15em] hover:text-kente-gold transition-colors"
+        >
+          FAQ
+        </Link>
       </div>
     </nav>
   );

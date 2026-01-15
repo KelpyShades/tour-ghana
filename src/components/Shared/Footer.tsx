@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -6,38 +7,68 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="space-y-4">
-            <h3 className="text-2xl font-black tracking-tighter text-kente-gold">
-              TOUR GHANA
-            </h3>
+            <Link to="/" className="inline-block">
+              <h3 className="text-2xl font-black tracking-tighter text-kente-gold">
+                TOUR GHANA
+              </h3>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               Experience the warmth, rhythm, and colors of West Africa with our
               curated tours and unforgettable adventures.
             </p>
+            <div className="pt-4 flex flex-col space-y-2">
+              <Link
+                to="/about"
+                className="text-white hover:text-kente-gold transition-colors font-medium"
+              >
+                About Us
+              </Link>
+              <Link
+                to="/guide"
+                className="text-white hover:text-kente-gold transition-colors font-medium"
+              >
+                Travel Guide
+              </Link>
+              <Link
+                to="/faq"
+                className="text-white hover:text-kente-gold transition-colors font-medium"
+              >
+                FAQ
+              </Link>
+            </div>
           </div>
 
           <div>
             <h4 className="font-bold text-lg mb-4 text-gold-light">Connect</h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-black transition-all duration-300"
               >
                 <Facebook size={18} />
               </a>
               <a
-                href="#"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-black transition-all duration-300"
               >
                 <Instagram size={18} />
               </a>
               <a
-                href="#"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-black transition-all duration-300"
               >
                 <Twitter size={18} />
               </a>
               <a
-                href="#"
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-black transition-all duration-300"
               >
                 <Youtube size={18} />
